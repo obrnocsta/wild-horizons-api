@@ -11,17 +11,11 @@ const server = http.createServer(async (req, res) => {
     sendJSON(res, 200, data)
 
   } else if (req.url.startsWith('/api/continent') && req.method === 'GET') {
-    const param = req.url.split('/').pop().replace('%20', ' ')
-    data = data.filter(destination => {
-      return destination.continent.toLowerCase() === param.toLowerCase()
-    })
+    data = filterData(req, data, 'continent')
     sendJSON(res, 200, data)
 
   } else if (req.url.startsWith('/api/country') && req.method === 'GET') {
-    const param = req.url.split('/').pop().replace('%20', ' ')
-    data = data.filter(destination => {
-      return destination.country.toLowerCase() === param.toLowerCase()
-    })
+    data = filterData(req, data, 'country')
     sendJSON(res, 200, data)
 
   } else {
