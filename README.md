@@ -1,6 +1,6 @@
-# Wild Horizons API
-
 # Desafio Backend Node.js – Wild Horizons API
+
+![Demo da API em ação](./docs/demo.gif)
 
 API simples construída **apenas com o módulo http nativo do Node.js** (sem Express ou qualquer framework externo).
 
