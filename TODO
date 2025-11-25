@@ -1,0 +1,22 @@
+# Curriculum Overview
+
+## We will be studying:
+
+**The core HTTP module**
+ - creating a server
+ - sending status code
+ - setting headers
+ - handling requests/responses
+ - filtering data
+ - extracting query params
+
+ ## 3 ways users can get data
+
+ **Paths:**
+ - `/api`
+ - `/api/continent/india`
+ - `/api?country=turkey&is_open_to_public=true`
+
+## The request/response cycle
+
+- `client` send request to the `server` via `http` protocol, the `request` contains a method `GET`, request path `/api`, and data query string `/api?country=turkey&is_open_to_public=true` or path params `/api/continent/india`. The `server` reseive and handle `request`, filtering data, throwing an error, generate a `response` and send it via `http` protocol, the `response` contains resource `JSON`, content-type `application/json`, status code `200`, status message `ok`.
