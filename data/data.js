@@ -4,7 +4,7 @@ export const data = [
     location: "Waitomo",
     country: "New Zealand",
     continent: "Oceania",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440001",
     details: [
       {
@@ -22,7 +22,7 @@ export const data = [
     location: "Darvaza",
     country: "Turkmenistan",
     continent: "Asia",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440002",
     details: [
       {
@@ -40,7 +40,7 @@ export const data = [
     location: "Mauritius",
     country: "Mauritius",
     continent: "Africa",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440003",
     details: [
       {
@@ -58,7 +58,7 @@ export const data = [
     location: "County Antrim",
     country: "Northern Ireland",
     continent: "Europe",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440004",
     details: [
       {
@@ -76,7 +76,7 @@ export const data = [
     location: "Nevada",
     country: "USA",
     continent: "North America",
-    is_open_to_public: false,
+    is_open: false,
     uuid: "550e8400-e29b-41d4-a716-446655440005",
     details: [
       {
@@ -94,7 +94,7 @@ export const data = [
     location: "Rogaland",
     country: "Norway",
     continent: "Europe",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440006",
     details: [
       {
@@ -112,7 +112,7 @@ export const data = [
     location: "Arizona",
     country: "USA",
     continent: "North America",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440007",
     details: [
       {
@@ -129,7 +129,7 @@ export const data = [
     location: "Socotra",
     country: "Yemen",
     continent: "Asia",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440008",
     details: [
       {
@@ -146,7 +146,7 @@ export const data = [
     location: "Denizli",
     country: "Turkey",
     continent: "Asia",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440009",
     details: [
       {
@@ -164,7 +164,7 @@ export const data = [
     location: "Meta",
     country: "Colombia",
     continent: "South America",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440010",
     details: [
       {
@@ -182,7 +182,7 @@ export const data = [
     location: "Panjin",
     country: "China",
     continent: "Asia",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440011",
     details: [
       {
@@ -200,7 +200,7 @@ export const data = [
     location: "Victoria Falls",
     country: "Zambia",
     continent: "Africa",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440012",
     details: [
       {
@@ -217,7 +217,7 @@ export const data = [
     location: "Juneau",
     country: "USA",
     continent: "North America",
-    is_open_to_public: false,
+    is_open: false,
     uuid: "550e8400-e29b-41d4-a716-446655440013",
     details: [
       {
@@ -235,7 +235,7 @@ export const data = [
     location: "Koekohe Beach",
     country: "New Zealand",
     continent: "Oceania",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440014",
     details: [
       {
@@ -253,7 +253,7 @@ export const data = [
     location: "Ladakh",
     country: "India",
     continent: "Asia",
-    is_open_to_public: true,
+    is_open: true,
     uuid: "550e8400-e29b-41d4-a716-446655440015",
     details: [
       {
@@ -270,7 +270,7 @@ export const data = [
     location: "Chihuahua",
     country: "Mexico",
     continent: "North America",
-    is_open_to_public: false,
+    is_open: false,
     uuid: "550e8400-e29b-41d4-a716-446655440016",
     details: [
       {
@@ -287,7 +287,7 @@ export const data = [
     location: "Ilha da Queimada Grande",
     country: "Brazil",
     continent: "South America",
-    is_open_to_public: false,
+    is_open: false,
     uuid: "550e8400-e29b-41d4-a716-446655440017",
     details: [
       {
@@ -305,7 +305,7 @@ export const data = [
     location: "Andaman Islands",
     country: "India",
     continent: "Asia",
-    is_open_to_public: false,
+    is_open: false,
     uuid: "550e8400-e29b-41d4-a716-446655440018",
     details: [
       {
@@ -323,7 +323,7 @@ export const data = [
     location: "Izu Oshima Island",
     country: "Japan",
     continent: "Asia",
-    is_open_to_public: false,
+    is_open: false,
     uuid: "550e8400-e29b-41d4-a716-446655440019",
     details: [
       {
