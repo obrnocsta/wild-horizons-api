@@ -1,5 +1,6 @@
 import http from "node:http";
 import { getDataFromDB } from "./database/db.js";
+import { sendJSON } from "./sendJSON.js";
 
 const PORT = 8000;
 
@@ -7,9 +8,7 @@ const data = await getDataFromDB();
 
 const server = http.createServer((req, res) => {
   if (req.url === "/api" && req.method === "GET") {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify(data));
+    sendJSON(res, 200, data);
   } else if (req.url.startsWith("/api/continent") && req.method === "GET") {
     const params = req.url.split("/");
     const continent = params.pop().replace("%20", " ");
@@ -17,18 +16,13 @@ const server = http.createServer((req, res) => {
     const dataFiltered = data.filter((d) =>
       d.continent.toLowerCase().includes(continent.toLowerCase()),
     );
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify(dataFiltered));
+    sendJSON(res, 200, dataFiltered);
   } else {
-    res.statusCode = 404;
-    res.setHeader("Content-Type", "application/json");
-    res.end(
-      JSON.stringify({
-        error: "not found",
-        message: "The requested route does not exist",
-      }),
-    );
+    const error = {
+      error: "not found",
+      message: "The requested route does not exist",
+    };
+    sendJSON(res, 404, error);
   }
 });
 
