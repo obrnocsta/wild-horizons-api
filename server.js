@@ -1,6 +1,7 @@
 import http from "node:http";
 import { getDataFromDB } from "./database/db.js";
-import { sendJSON } from "./sendJSON.js";
+import { sendJSON } from "./utils/sendJSON.js";
+import { filterByParams } from "./utils/filterByParams.js";
 
 const PORT = 8000;
 
@@ -10,12 +11,10 @@ const server = http.createServer((req, res) => {
   if (req.url === "/api" && req.method === "GET") {
     sendJSON(res, 200, data);
   } else if (req.url.startsWith("/api/continent") && req.method === "GET") {
-    const params = req.url.split("/");
-    const continent = params.pop().replace("%20", " ");
-    console.log(continent);
-    const dataFiltered = data.filter((d) =>
-      d.continent.toLowerCase().includes(continent.toLowerCase()),
-    );
+    const dataFiltered = filterByParams(req, data);
+    sendJSON(res, 200, dataFiltered);
+  } else if (req.url.startsWith("/api/country") && req.method === "GET") {
+    const dataFiltered = filterByParams(req, data);
     sendJSON(res, 200, dataFiltered);
   } else {
     const error = {
