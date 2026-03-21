@@ -1,0 +1,21 @@
+{
+  "name": "the-wild-horizons-api",
+  "version": "1.0.0",
+  "description": "It's a one stop shop for fun facts about some of the world's most intriguing travel destinations, and we have a noble aim here.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obrnocsta/the-wild-horizons-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/obrnocsta/the-wild-horizons-api/issues"
+  },
+  "homepage": "https://github.com/obrnocsta/the-wild-horizons-api#readme"
+}
