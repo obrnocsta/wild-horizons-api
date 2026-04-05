@@ -1,69 +1,69 @@
 # The Wild Horizons API
 
-A pure Node.js API that serves data about the world's most intriguing travel destinations. Built with core HTTP module knowledge to learn fundamental backend concepts.
+Uma API em Node.js puro que fornece dados sobre os destinos de viagem mais intrigantes do mundo. Construída utilizando apenas o módulo HTTP nativo para o aprendizado de conceitos fundamentais de backend.
 
-## 🚀 Getting Started
+## 🚀 Primeiros Passos
 
-### Installation
+### Instalação
 
 ```bash
 npm install
 ```
 
-### Running the Server
+### Executando o Servidor
 
 ```bash
 npm start
 ```
 
-The server runs on `http://localhost:8000`
+O servidor será executado em `http://localhost:8000`
 
-## 📍 Project Structure
+## 📍 Estrutura do Projeto
 
 ```
 the-wild-horizons-api/
-├── server.js              # Main server file with route handlers
-├── package.json           # Project metadata and scripts
+├── server.js          # Arquivo principal do servidor com manipuladores de rotas
+├── package.json       # Metadados e scripts do projeto
 ├── data/
-│   └── data.js           # Travel destination dataset
+│   └── data.js        # Conjunto de dados dos destinos de viagem
 ├── database/
-│   └── db.js             # Data retrieval function
+│   └── db.js          # Função de recuperação de dados
 ├── utils/
-│   ├── sendJSON.js       # Response formatting utility
-│   ├── filterByParams.js # URL parameter-based filtering
-│   └── filterByQueries.js # Query string-based filtering
+│   ├── sendJSON.js    # Utilitário para formatação de resposta
+│   ├── filterByParams.js # Filtragem baseada em parâmetros de URL
+│   └── filterByQueries.js # Filtragem baseada em query strings
 ```
 
-## 🔗 API Endpoints
+## 🔗 Endpoints da API
 
-### Get All Destinations (with filtering)
+### Listar Todos os Destinos (com filtragem)
 
 **GET** `/api`
 
-Filter using query parameters:
-- `continent` - Filter by continent name
-- `country` - Filter by country name  
-- `is_open` - Filter by open status (true/false)
+Filtre usando parâmetros de consulta (query parameters):
+- `continent` - Filtrar por nome do continente
+- `country` - Filtrar por nome do país  
+- `is_open` - Filtrar por status de abertura (true/false)
 
-Example:
+Exemplo:
 ```
 GET /api?continent=Asia&is_open=true
 ```
 
-### Get Destination by Field
+### Buscar Destino por Campo
 
 **GET** `/api/{field}/{value}`
 
-Dynamically filter by any destination field (name, location, continent, country, etc.)
+Filtre dinamicamente por qualquer campo do destino (nome, localização, continente, país, etc.)
 
-Examples:
+Exemplos:
 ```
 GET /api/name/The%20Wave
 GET /api/country/New%20Zealand
 GET /api/continent/Europe
 ```
 
-**Response Example:**
+**Exemplo de Resposta:**
 ```json
 [
   {
@@ -75,69 +75,69 @@ GET /api/continent/Europe
     "uuid": "550e8400-e29b-41d4-a716-446655440007",
     "details": [
       {
-        "fun_fact": "The sandstone formations look like waves frozen in time."
+        "fun_fact": "As formações de arenito parecem ondas congeladas no tempo."
       },
       {
-        "description": "A sought-after hiking spot in the Coyote Buttes area..."
+        "description": "Um local de caminhada muito procurado na área de Coyote Buttes..."
       }
     ]
   }
 ]
 ```
 
-### Error Handling
+### Tratamento de Erros
 
-Invalid routes return 404:
+Rotas inválidas retornam 404:
 ```json
 {
   "error": "not found",
-  "message": "The requested route does not exist"
+  "message": "A rota solicitada não existe"
 }
 ```
 
-Not found results:
+Resultados não encontrados:
 ```json
 {
   "error": "not found",
-  "message": "The request '{value}' in '{field}' does not exist"
+  "message": "A requisição '{value}' em '{field}' não existe"
 }
 ```
 
-## 📚 Core Concepts Learned
+## 📚 Principais Conceitos Aprendidos
 
-- **HTTP Module** - Node's native `node:http` module
-- **Server Creation** - Creating and running HTTP servers
-- **Status Codes** - Returning appropriate HTTP response codes (200, 404, etc.)
-- **Headers** - Setting response headers like `Content-Type`
-- **Request/Response Handling** - Processing incoming requests and sending responses
-- **Data Filtering** - Multiple filtering strategies (query params, URL params)
-- **Query Parameters** - Extracting and parsing URL search parameters
+- **Módulo HTTP** - Módulo nativo `node:http` do Node
+- **Criação de Servidor** - Criar e rodar servidores HTTP
+- **Códigos de Status** - Retornar códigos de resposta HTTP apropriados (200, 404, etc.)
+- **Headers (Cabeçalhos)** - Definir cabeçalhos de resposta como `Content-Type`
+- **Manipulação de Request/Response** - Processar requisições recebidas e enviar respostas
+- **Filtragem de Dados** - Múltiplas estratégias de filtragem (query params, URL params)
+- **Parâmetros de Consulta** - Extração e análise de parâmetros de busca na URL
 
-## 🎯 Stretch Goals
+## 🎯 Próximos Passos (Stretch Goals)
 
-- [x] Error handling for invalid routes
-- [ ] Handle POST requests (authentication to be added later)
-- [ ] Advanced filtering capabilities
-- [ ] Expand API routes and data
-- [ ] Prepare for production deployment
+- [x] Tratamento de erros para rotas inválidas
+- [ ] Manipular requisições POST (autenticação a ser adicionada futuramente)
+- [ ] Recursos avançados de filtragem
+- [ ] Expandir rotas da API e dados
+- [ ] Preparar para implantação em produção (deployment)
 
-## 📦 Data Model
+## 📦 Modelo de Dados
 
-Each destination object contains:
-- `name` - Destination name
-- `location` - Specific location/region
-- `country` - Country name
-- `continent` - Continent name
-- `is_open` - Boolean indicating if open to visitors
-- `uuid` - Unique identifier
-- `details` - Array with fun facts and descriptions
+Cada objeto de destino contém:
+- `name` - Nome do destino
+- `location` - Localização específica/região
+- `country` - Nome do país
+- `continent` - Nome do continente
+- `is_open` - Booleano indicando se está aberto a visitantes
+- `uuid` - Identificador único
+- `details` - Array com curiosidades e descrições
 
-## 💡 Technologies
+## 💡 Tecnologias
 
-- **Node.js** - JavaScript runtime
-- **ES Modules** - Modern JavaScript modules
-- **Native HTTP Module** - No external dependencies
+- **Node.js** - Ambiente de execução JavaScript
+- **ES Modules** - Módulos JavaScript modernos
+- **Módulo HTTP Nativo** - Sem dependências externas
 
 ---
 
-Made with ❤️ as a learning project
+Feito com ❤️ como um projeto de aprendizado
