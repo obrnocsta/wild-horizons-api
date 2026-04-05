@@ -1,4 +1,4 @@
-# The Wild Horizons API
+# Wild Horizons API
 
 Uma API em Node.js puro que fornece dados sobre os destinos de viagem mais intrigantes do mundo. Construída utilizando apenas o módulo HTTP nativo para o aprendizado de conceitos fundamentais de backend.
 
